@@ -1,4 +1,25 @@
-    print(BANNER)
+from GUI.py import *
+from config.py import *
+from main.py import *
+from plots.py  import *
+from session.py import *
+from wdc.py import *
+from fastf1 import *
+
+SESSION_PLOTS = {
+    "1": ("Speed tracks",      speed_tracks),
+    "2": ("Position changes",  position_changes),
+    "3": ("Gear shifts",       gear_shifts),
+    "4": ("Qualifying result", qualifying_result),
+    "5": ("Speed on track",    speed_on_track),
+    "6": ("Speed traces",      speed_traces),
+    "7": ("Tyre strategy",     plot_strategy),
+    "8": ("Team pace ranking", team_pace_ranking),
+}
+
+current_session = None
+
+print(BANNER)
 
     open_count = sum(plt.fignum_exists(f.number) for f in open_figures)
     if open_count:
