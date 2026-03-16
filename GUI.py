@@ -63,10 +63,3 @@ class App(QWidget):
                   j,
                   QTableWidgetItem(str(row[col]))
               )
-            
-app = QApplication(sys.argv)
-
-window = F1App()
-window.show()
-
-sys.exit(app.exec())
